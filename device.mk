@@ -53,6 +53,14 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service-recovery \
+    android.hardware.gatekeeper@1.0-impl-recovery
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.gatekeeper=beanpod
+
 # MediaTek Preloader Utils
 PRODUCT_PACKAGES += \
     mtk_plpath_utils.recovery
