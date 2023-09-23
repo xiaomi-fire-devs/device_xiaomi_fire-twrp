@@ -20,6 +20,12 @@ on post-fs
     # MediaTek Preloader Utils
     start mtk.plpath.utils.link
 
+on post-fs
+    start boot-hal-1-2
+
+on boot
+    start health-hal-2-1
+
 service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
     class main
     user root
@@ -27,4 +33,3 @@ service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
     oneshot
     disabled
     seclabel u:r:recovery:s0
-
