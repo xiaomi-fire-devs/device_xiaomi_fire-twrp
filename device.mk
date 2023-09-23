@@ -70,6 +70,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
+# TEE
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.mtk_microtrust_tee_support=1 \
+    ro.vendor.mtk_tee_gp_support=1
+
 # USB
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.sys.usb.storage.type=mtp
