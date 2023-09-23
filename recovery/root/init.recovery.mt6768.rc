@@ -1,6 +1,7 @@
 on init
     setprop sys.usb.configfs 1
     setprop sys.usb.ffs.aio_compat 0
+    export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
 
 on fs && property:ro.debuggable=0
     # distinguish USB shoulde connect or not, i.e. CDP vs SDP
@@ -20,6 +21,9 @@ on post-fs
     # MediaTek Preloader Utils
     start mtk.plpath.utils.link
 
+on fs
+    install_keyring
+
 on post-fs
     start boot-hal-1-2
 
@@ -31,5 +35,32 @@ service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
     user root
     group root system
     oneshot
+    disabled
+    seclabel u:r:recovery:s0
+
+on property:hwservicemanager.ready=true
+
+on property:ro.crypto.state=unsupported
+    stop servicemanager
+    stop hwservicemanager
+
+on property:ro.crypto.state=unencrypted
+    stop servicemanager
+    stop hwservicemanager
+
+on property:twrp.decrypt.done=true
+    stop servicemanager
+    stop hwservicemanager
+
+service keystore_auth /system/bin/keystore_auth
+    oneshot
+    user system
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+service keystore /system/bin/keystore /tmp/misc/keystore
+    user root
+    group root drmrpc readproc log
     disabled
     seclabel u:r:recovery:s0
