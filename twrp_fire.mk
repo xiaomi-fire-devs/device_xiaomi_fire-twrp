@@ -12,12 +12,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common TWRP stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-# Inherit from selene device
-$(call inherit-product, device/xiaomi/selene/device.mk)
+# Inherit from fire device
+$(call inherit-product, device/xiaomi/fire/device.mk)
 
-PRODUCT_DEVICE := selene
-PRODUCT_NAME := twrp_selene
+PRODUCT_DEVICE := fire
+PRODUCT_NAME := twrp_fire
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := 21061119AG
-PRODUCT_MANUFACTURER := xiaomi
+PRODUCT_MODEL := Redmi 12
+PRODUCT_MANUFACTURER := Xiaomi
 

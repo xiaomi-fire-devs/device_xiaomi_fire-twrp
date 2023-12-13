@@ -19,7 +19,7 @@
 # 	Please maintain this if you use this script or any part of it
 #
 
-FDEVICE="selene"
+FDEVICE="fire"
 #set -o xtrace
 
 fox_get_target_device() {
@@ -38,17 +38,17 @@ fi
 
 # Dirty Fix: Only declare orangefox vars when needed
 if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
-	echo -e "\x1b[96m[INFO]: Setting up OrangeFox build vars for selene...\x1b[m"
+	echo -e "\x1b[96m[INFO]: Setting up OrangeFox build vars for fire...\x1b[m"
 	if [ "$1" = "$FDEVICE" ] || [  "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 		# Version / Maintainer infos
-		export OF_MAINTAINER="fukiame"
+		export OF_MAINTAINER="Kizziama"
 		export FOX_VERSION=R11.1_2
 		export FOX_BUILD_TYPE="Unofficial"
 
 		# Device info
 		export FOX_AB_DEVICE=1
 		export FOX_VIRTUAL_AB_DEVICE=1
-		export TARGET_DEVICE_ALT="selenes, eos"
+		export TARGET_DEVICE_ALT="fire"
 		
 		# OTA / DM-Verity / Encryption
 		export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
@@ -61,7 +61,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 		export OF_SKIP_DECRYPTED_ADOPTED_STORAGE=1
 
 		# Display / Leds
-		export OF_SCREEN_H="2400"
+		export OF_SCREEN_H="2460"
 		export OF_STATUS_H="100"
 		export OF_STATUS_INDENT_LEFT=48
 		export OF_STATUS_INDENT_RIGHT=48

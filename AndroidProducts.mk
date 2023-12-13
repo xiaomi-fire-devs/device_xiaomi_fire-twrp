@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_selene.mk
+    $(LOCAL_DIR)/twrp_fire.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_selene-user \
-    twrp_selene-userdebug \
-    twrp_selene-eng
+    twrp_fire-user \
+    twrp_fire-userdebug \
+    twrp_fire-eng

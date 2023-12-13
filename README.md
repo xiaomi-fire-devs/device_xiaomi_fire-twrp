@@ -1,4 +1,4 @@
-# Android device tree for Redmi 21061119AG (selene)
+# Android device tree for Redmi 12 (fire)
 
 ```
 #

@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/selene
+DEVICE_PATH := device/xiaomi/fire
 
 # For building with aosp manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -43,10 +43,10 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := selene
+TARGET_OTA_ASSERT_DEVICE := fire
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := selene
+TARGET_BOOTLOADER_BOARD_NAME := fire
 TARGET_NO_BOOTLOADER := true
 
 # Display
@@ -134,7 +134,7 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
-TW_DEVICE_VERSION := idkHelpPls
+TW_DEVICE_VERSION := Kizziama
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true
