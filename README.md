@@ -1,4 +1,4 @@
-# Android device tree for Redmi 12 (fire)
+# Android device tree for Redmi fire (fire)
 
 ```
 #

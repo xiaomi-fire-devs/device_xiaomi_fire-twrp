@@ -7,17 +7,17 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-# Inherit some common TWRP stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
-
-# Inherit from fire device
+# Inherit from fleur device
 $(call inherit-product, device/xiaomi/fire/device.mk)
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 PRODUCT_DEVICE := fire
 PRODUCT_NAME := twrp_fire
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := Redmi 12
-PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_MODEL := fire
+PRODUCT_MANUFACTURER := xiaomi
 
